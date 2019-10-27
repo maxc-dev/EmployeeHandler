@@ -31,7 +31,7 @@ public class EmployeeTest {
 		CompanyPosition companyPosition = new CompanyPosition();
 		companyPosition.setPositionName("Director");
 
-		Employee employee = new Employee(1234, "Sid", "James", salary, companyPosition);
+		Employee employee = new Employee(1234, "Sid", "James", salary, companyPosition, 50);
 
 		// Test the fields.
 		assertEquals(1234, employee.getId());
@@ -53,10 +53,10 @@ public class EmployeeTest {
 		CompanyPosition companyPosition = new CompanyPosition();
 		companyPosition.setPositionName("Director");
 
-		Employee employee = new Employee(1234, "Sid", "James", salary, companyPosition);
+		Employee employee = new Employee(1234, "Sid", "James", salary, companyPosition, 50);
 
 		// Test the string of of the correct format - this is precise.
-		assertEquals("James, Sid (1234): Director at ï¿½100000.0 (ï¿½29822.0 tax) and is eligible for bonus.",
+		assertEquals("James, Sid (1234): Director at £100000.0 (£29822.0 tax) and is eligible for bonus.",
 				employee.toString());
 	}
 
@@ -72,10 +72,10 @@ public class EmployeeTest {
 		CompanyPosition companyPosition = new CompanyPosition();
 		companyPosition.setPositionName("Sales Person");
 
-		Employee employee = new Employee(5678, "Joe", "Bloggs", salary, companyPosition);
+		Employee employee = new Employee(5678, "Joe", "Bloggs", salary, companyPosition, 50);
 
 		// Test the string of of the correct format - this is precise.
-		assertEquals("Bloggs, Joe (5678): Sales Person at ï¿½30000.0 (ï¿½4112.0 tax) and is not eligible for bonus.",
+		assertEquals("Bloggs, Joe (5678): Sales Person at £30000.0 (£4112.0 tax) and is not eligible for bonus.",
 				employee.toString());
 	}
 }

@@ -42,7 +42,7 @@ public class SalaryTest {
 
 		// Tax should be paid at 20% on �7035.
 		salary.setSalary(16475);
-		assertEquals(1407.0, salary.calculateTax(), 0);
+		assertEquals(1407.0, salary.calculateTax(50), 0);
 
 	}
 
@@ -56,7 +56,7 @@ public class SalaryTest {
 
 		// Tax should be paid at 20% on �32010, plus 40% on �12425.
 		salary.setSalary(53875);
-		assertEquals(6402 + 4970, salary.calculateTax(), 0);
+		assertEquals(6402 + 4970, salary.calculateTax(50), 0);
 	}
 
 	/**
@@ -69,6 +69,6 @@ public class SalaryTest {
 
 		// No tax should be paid.
 		salary.setSalary(1000);
-		assertEquals(0, salary.calculateTax(), 0);
+		assertEquals(0, salary.calculateTax(50), 0);
 	}
 }
