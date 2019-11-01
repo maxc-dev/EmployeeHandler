@@ -5,15 +5,28 @@ package org.com1017.formative.mc01584;
  * @since 19/10/2019
  */
 public class Salary {
-    //Defining constants for tax rates.
+    /** The personal tax allowance. */
     private static final int PERSONAL_ALLOWANCE_DEFAULT = 9440;
+    
+    /** Second personal allowance for seniors. */
     private static final int PERSONAL_ALLOWANCE_SECOND_THRESHOLD = 10500;
+    
+    /** Third personal allowance for seniors+. */
     private static final int PERSONAL_ALLOWANCE_THIRD_THRESHOLD = 10660;
+    
+    /** The age required to be eligible for the second threshold. */
     private static final int PERSONAL_ALLOWANCE_SECOND_AGE = 65;
+    
+    /** The age required to be eligible for the third threshold. */
     private static final int PERSONAL_ALLOWANCE_THIRD_AGE = 75;
+    
+    /** The tax threshold for the lower tax rate. */
     private static final int TAX_LOWER_THRESHOLD = 32010;
 
+    /** Rate at which the lower tax band is taxed at. */
     private static final double TAX_RATE_LOWER = 0.2;
+    
+    /** Rate at which the highest tax band is taxed at. */
     private static final double TAX_RATE_HIGHER = 0.4;
 
 

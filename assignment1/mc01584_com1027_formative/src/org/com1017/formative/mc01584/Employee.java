@@ -128,20 +128,28 @@ public class Employee {
 
     @Override
     public String toString() {
+    	//Creates a string buffer object and appends employee data
     	StringBuffer stringBuffer = new StringBuffer();
     	stringBuffer.append(getSurname());
     	stringBuffer.append(", ");
     	stringBuffer.append(getForename());
     	stringBuffer.append(" (");
     	stringBuffer.append(getId());
+    	stringBuffer.append("): ");
+    	
+    	//Position and salary are displayed here
     	stringBuffer.append(getPositionName());
     	stringBuffer.append(" at £");
     	stringBuffer.append(getSalary());
+    	
+    	//Determines if employee is eligible for bonus
     	stringBuffer.append(" (£");
     	stringBuffer.append(salary.calculateTax(getAge()));
     	stringBuffer.append(" tax) and is ");
     	stringBuffer.append(eligibleForBonus() ? "" : "not ");
-    	stringBuffer.append("eligible for a bonus.");
+    	stringBuffer.append("eligible for bonus.");
+    	
+    	//Return the built string buffer.
         return stringBuffer.toString();
     }
 }
